@@ -19,7 +19,7 @@ void solve() {
     cin >> n;
     vector <LL> a (n);
     for (int i = 0; i < n; i++) cin >> a[i];
-    sort(a, a + n);
+    sort(a.begin(), a.end());
     if (a[0] == a[n - 1]) cout << n << endl;
     else cout << 1 << endl;
 }
