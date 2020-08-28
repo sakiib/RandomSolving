@@ -1,4 +1,4 @@
 input.txt
 output.txt
-.exe
-.o
+*.exe
+*.o
