@@ -52,7 +52,7 @@ int main() {
         string tempWord;
 
         while (iss >> tempWord) {
-            assert(("window can't fit this word", tempWord.size() <= windowWidth));
+            assert(("window can't fit this word", (int)tempWord.size() <= windowWidth));
             words.push_back(tempWord);
         }
     }
