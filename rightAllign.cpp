@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <cassert>
+
 using namespace std;
 
 void rightAllign(int windowWidth, vector <string> words) {
