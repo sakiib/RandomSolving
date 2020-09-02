@@ -20,6 +20,7 @@ void rightAllign(int windowWidth, vector <string> words) {
     for (int i = 0; i < (int)allLines.size(); i++) {
         vector <string> currentLine = allLines[i];
         int usedSpace = 0;
+
         for (int j = 0; j < (int)currentLine.size(); j++) {
             if (j == (int)currentLine.size() - 1) {
                 int remainingSpace = windowWidth - usedSpace;
