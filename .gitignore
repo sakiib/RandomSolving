@@ -2,3 +2,5 @@ input.txt
 output.txt
 *.exe
 *.o
+/.idea
+/venv
