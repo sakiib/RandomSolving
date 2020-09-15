@@ -2,7 +2,7 @@ class Solution {
 public:
     const double eps = 1e-8;
 
-    int getCnt(int k, vector <int> &v) {
+    int getSmallerEqual(int k, vector <int> &v) {
         int lo = 0, hi = v.size() - 1, ret = 0;
         while (lo <= hi) {
             int mid = (lo + hi) >> 1;
@@ -15,7 +15,7 @@ public:
         int lo = -1e9, hi = 1e9, ret = 0;
         while (lo <= hi) {
             int mid = (lo + hi) >> 1;
-            int cnt = getCnt(mid, nums1) + getCnt(mid, nums2);
+            int cnt = getSmallerEqual(mid, nums1) + getSmallerEqual(mid, nums2);
             if (cnt > k) ret = mid, hi = mid - 1;
             else lo = mid + 1;
         }
