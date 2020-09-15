@@ -1,3 +1,4 @@
+// Complexity: O(lg^2(m + n))
 class Solution {
 public:
     const double eps = 1e-8;
