@@ -29,7 +29,7 @@ public:
     void build(int node, int b, int e) {
         if (b > e) return;
         if (b == e) { tree[node] = val[b]; return; }
-        int l = node << 1, r = l | 1, m = (l + r) >> 1;
+        int l = node << 1, r = l | 1, m = (b + e) >> 1;
         build(l, b, m);
         build(r, m + 1, e);
         tree[node] = (tree[l] + tree[r]);
