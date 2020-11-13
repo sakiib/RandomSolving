@@ -26,7 +26,7 @@ public:
     void build(int node, int b, int e) {
         if (b > e) return;
         if (b == e) { tree[node] = val[b]; return; }
-        int l = node << 1, r = l | 1, m = (l + r) >> 1;
+        int l = node << 1, r = l | 1, m = (b + e) >> 1;
         build(l, b, m);
         build(r, m + 1, e);
         tree[node] = (tree[l] + tree[r]);
@@ -34,7 +34,7 @@ public:
     void update(int node, int b, int e, int pos, T add) {
         if (b > e || pos > e || pos < b) return;
         if (b == e && b == pos) { tree[node] += add; return; }
-        int l = node << 1, r = l | 1, m = (l + r) >> 1;
+        int l = node << 1, r = l | 1, m = (b + e) >> 1;
         update(l, b, m, pos, add);
         update(r, m + 1, e, pos, add);
         tree[node] = (tree[l] + tree[r]);
@@ -42,7 +42,7 @@ public:
     T query(int node, int b, int e, int i, int j) {
         if (b > e || i > e || j < b) return def_value;
         if (i <= b && j >= e) return tree[node];
-        int l = node << 1, r = l | 1, m = (l + r) >> 1;
+        int l = node << 1, r = l | 1, m = (b + e) >> 1;
         return query(l, b, m, i, j) + query(r, m + 1, e, i, j);
     }
 };
