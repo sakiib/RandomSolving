@@ -1,10 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
- 
-// loj - 1047
- 
+
 const int inf = 2e9;
- 
+
 int main() {
     int t;
     scanf("%d", &t);
