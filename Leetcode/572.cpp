@@ -12,17 +12,27 @@
 class Solution {
 public:
     bool isSame(TreeNode* s, TreeNode* t) {
-        if (s == nullptr && t == nullptr) return true;
-        if (s == nullptr || t == nullptr) return false;
+        if (s == nullptr && t == nullptr) {
+            return true;
+        }
+        if (s == nullptr || t == nullptr) {
+            return false;
+        }
         
-        if (s -> val != t -> val) return false;
+        if (s -> val != t -> val) {
+            return false;
+        }
         
         return isSame(s -> left, t -> left) && isSame(s -> right, t -> right);
     }
     
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        if (s == nullptr) return false;
-        if (isSame(s, t)) return true;
-        return isSubtree(s -> left, t) || isSubtree(s -> right, t);
+        if (root == nullptr) {
+            return false;
+        }
+        if (isSame(root, subRoot)) {
+            return true;
+        }
+        return isSubtree(root -> left, subRoot) || isSubtree(root -> right, subRoot);
     }
 };
