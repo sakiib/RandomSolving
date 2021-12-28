@@ -92,7 +92,7 @@ ListNode* addKthPosition(ListNode *head, int k, ListNode *cur) {
   return head;
 }
 
-// reverseList takes a linked list, reverses it and returns the new head
+// reverseList takes a linked list, reverses it iteratively and returns the new head
 ListNode* reverseList(ListNode *head) {
   ListNode *dummy = nullptr;
   while (head != nullptr) {
@@ -102,6 +102,22 @@ ListNode* reverseList(ListNode *head) {
     head = next;
   }
   return dummy;
+}
+
+// reverseList takes a linked list, reverses it recursively and returns the new head
+ListNode* reverseListRec(ListNode *head) {
+  if (head == nullptr) {
+    return nullptr;
+  }
+  if (head -> next == nullptr) {
+    return head;
+  }
+
+  ListNode *temp = reverseListRec(head -> next);
+
+  head -> next -> next = head;
+  head -> next = nullptr;
+  return temp;
 }
 
 int main() {
