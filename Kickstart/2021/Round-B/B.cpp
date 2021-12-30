@@ -71,6 +71,11 @@ int solve(int n) {
     if ((a[i + 1] - a[i - 1])&1) {
       continue;
     }
+    
+    // same chunck, no need to change i'th value
+    if (a[i ] - a[i - 1] == a[i + 1] - a[i]) {
+      continue;
+    }
 
     // common difference
     int k = (a[i + 1] - a[i - 1]) / 2;
