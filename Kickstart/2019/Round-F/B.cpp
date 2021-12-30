@@ -40,7 +40,7 @@ const int base[] = {
 int p[N][2];
 
 int mul(int x, int y, int MOD) {
-  return (1 LL * x * y) % MOD;
+  return (1LL * x * y) % MOD;
 }
 
 int add(int x, int y, int MOD) {
