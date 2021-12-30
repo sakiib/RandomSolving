@@ -73,7 +73,7 @@ int solve(int n) {
     }
     
     // same chunck, no need to change i'th value
-    if (a[i ] - a[i - 1] == a[i + 1] - a[i]) {
+    if (a[i] - a[i - 1] == a[i + 1] - a[i]) {
       continue;
     }
 
